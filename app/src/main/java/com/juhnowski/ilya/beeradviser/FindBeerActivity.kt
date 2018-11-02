@@ -19,7 +19,7 @@ class FindBeerActivity : Activity() {
         val colorBeer = findViewById<Spinner?>(R.id.color_beer)
         val suggestBeer = findViewById<TextView?>(R.id.suggest_beer).apply {
             this?.text=""
-            getBrands(colorBeer?.selectedItem as String).forEach { this?.append(it); this?.append("\n")}
+            getBrands(colorBeer?.selectedItem as String).forEach { this?.append("${it}\n")}
         }
 
     }
